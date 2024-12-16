@@ -1,0 +1,1397 @@
+{
+	"info": {
+		"_postman_id": "f05d9dc3-6b96-41f6-bebc-5a6733a9e430",
+		"name": "Laravel Launcher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29611540",
+		"_collection_link": "https://mmr777.postman.co/workspace/Team-Workspace~0737c42f-24d1-4f2f-8f16-300d5e5d2eb0/collection/29611540-f05d9dc3-6b96-41f6-bebc-5a6733a9e430?action=share&source=collection_link&creator=29611540"
+	},
+	"item": [
+		{
+			"name": "Term&Condtion",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"Hello\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/term-conditions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"term-conditions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Term&Conditon",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/term-conditions",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"term-conditions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Section",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"section\":\"7\",\r\n    // \"heading\":\"Hello Section\",\r\n    \"sub-heading\":\"sub seven\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Add-Section",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Add-Section"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Section",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Show-Section",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Show-Section"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-About",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"heading\":\"Heading 1\",\r\n    \"content\":\"Content 1\",\r\n    \"url\":\"https://www.youtube.com/watch?v=GRe-HQUjbZI\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Add-About",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Add-About"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-About",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Show-About",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Show-About"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Details-Company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_name\": \"Example Company\",\r\n    \"company_address\": \"1234 Main St 1\",\r\n    \"company_email\": \"contact@example.co\",\r\n    \"company_contact\": \"123-456-7891\",\r\n    \"company_timing\": \"9 AM - 6 PM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Add-Details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Add-Details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Details-Company",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Show-Details",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Show-Details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-QueAndAns",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Question\":\"production 1\",\r\n    \"Answer\":\"Launcher 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Add-QueAndAns",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Add-QueAndAns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-QueAndAns",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Show-QueAndAns",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Show-QueAndAns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update/QueAndAns",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"Answer\": \"Launcher\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Update/QueAndAns/19",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Update",
+						"QueAndAns",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete/QueAndAns",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Delete/QueAndAns/19",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Delete",
+						"QueAndAns",
+						"19"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Client",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "www.you.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Jagdish/OneDrive/Pictures/zoro.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Add-Client",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Add-Client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Show-Client",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Show-Client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update/Client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "www.some.co",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Jagdish/OneDrive/Pictures/v.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Update/Client/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Update",
+						"Client",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete/Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Delete/Client/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Delete",
+						"Client",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Banner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Banner_No",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "Banner_heading",
+							"value": "Heading 4",
+							"type": "text"
+						},
+						{
+							"key": "Banner_image",
+							"type": "file",
+							"src": "/C:/Users/Jagdish/OneDrive/Pictures/Screenshots/Screenshot 2023-05-05 123935.png"
+						},
+						{
+							"key": "banners[1][banner_heading]",
+							"value": "headin4",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "banners[1][banner_url]",
+							"type": "file",
+							"src": "/C:/Users/Jagdish/OneDrive/Pictures/WhatsApp Image 2023-10-15 at 08.57.38.jpeg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Add-Banner",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Add-Banner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Banner",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Show-Banner",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Show-Banner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Admin\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n       \"email\":\"admin1@gmail.com\",\r\n    \"password\":\"87654322\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin-profile/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTkyMjYwODgsImV4cCI6MTcxOTIyOTY4OCwibmJmIjoxNzE5MjI2MDg4LCJqdGkiOiIwQld4MTM3cEdJT2JjaE90Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.hRH-eHNJ889_91jDbMXkEo4V7oJtoDWeOYQu-rz3x1s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"87654321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/profile/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profile",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-QueAndAns/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Answer\":\"ji\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Update-QueAndAns/5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Update-QueAndAns",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Coupon",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"coupon_code\":\"n0in4fon0idwnc2\",\r\n    \"coupon_places\":[\"Travel\",\"Shoping\",\"Food\"],\r\n    \"discount\":50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Add-Coupon",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Add-Coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apply-Coupon",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"coupon_code\":\"n0in4fon0idwnc2\",\r\n    \"place\":\"Travel\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Apply-Coupon",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Apply-Coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-Coupon",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"coupon_places\":[\"Travel\",\"Shoping\"],\r\n    \"discount\":40\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Update-Coupon/n0in4fon0idw1212",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Update-Coupon",
+						"n0in4fon0idw1212"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-Coupon",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/Delete-Coupon/n0in4fon0idw1212",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"Delete-Coupon",
+						"n0in4fon0idw1212"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addJob",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2MDU1NTgsImV4cCI6MTcxOTYwOTE1OCwibmJmIjoxNzE5NjA1NTU4LCJqdGkiOiI3Tzg2Q081em5aN2c1NDZ6Iiwic3ViIjoiNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.QttJbZIGal4AP0CQ7_QxNoT_vkBpF22bxjpL_FojC-A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"Marketing manager\",\r\n    \"description\":\"This person is a Marketing manager\",\r\n    \"duration\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/addJob",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addJob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showJobAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTI2MzksImV4cCI6MTcxOTY1NjIzOSwibmJmIjoxNzE5NjUyNjM5LCJqdGkiOiJCdHhtYkt3YVFIWXo5SldyIiwic3ViIjoiNyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.2mnLO1fZCvnbwspralt_MVIg2ssGbvg3Eg6n0X3tkag",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/job",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"job"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateJobVerified",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateJobVerified/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateJobVerified",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateJobActive",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateJobActive/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateJobActive",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "empInfoAdmin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTYyMDAsImV4cCI6MTcxOTY1OTgwMCwibmJmIjoxNzE5NjU2MjAwLCJqdGkiOiJTbmU1dzJZZHJqZ002YWJOIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.1CMtnHa4w_0m_em77e26TLXYME5Ce9lY3cdpZ_dWbVY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/emp/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"emp",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Testing User\",\r\n       \"email\":\"info@TestingUser.co\",\r\n       \"password\":\"Testing@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/userRegister",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"userRegister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\":\"info@TestingUser.co\",\r\n       \"password\":\"Testing@321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/userLogin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"userLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUserProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTI2MzksImV4cCI6MTcxOTY1NjIzOSwibmJmIjoxNzE5NjUyNjM5LCJqdGkiOiJCdHhtYkt3YVFIWXo5SldyIiwic3ViIjoiNyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.2mnLO1fZCvnbwspralt_MVIg2ssGbvg3Eg6n0X3tkag",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_Number\":9876543211,\r\n    \"user_Address\":\"Secrets\", \r\n    \"user_City\":\"Faridabad\", \r\n    \"user_State\":\"Haryana\", \r\n    \"user_Country\":\"India India\", \r\n    \"user_PinCode\":\"121013\", \r\n    \"user_AboutMe\":\"Hello This is User Profile\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/addUserProfile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addUserProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showUserProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3MTk2NTI2MzksImV4cCI6MTcxOTY1NjIzOSwibmJmIjoxNzE5NjUyNjM5LCJqdGkiOiJCdHhtYkt3YVFIWXo5SldyIiwic3ViIjoiNyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.2mnLO1fZCvnbwspralt_MVIg2ssGbvg3Eg6n0X3tkag",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/showUserProfile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"showUserProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userPasswordUpdate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5sYXVuY2hlcnIuY28vYXBpL2F1dGgvdXNlckxvZ2luIiwiaWF0IjoxNzE5ODMwMjQ5LCJleHAiOjE3MTk5MTY2NDksIm5iZiI6MTcxOTgzMDI0OSwianRpIjoiRDYyeVNHU2JXaWdQeW9yUCIsInN1YiI6IjIwIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Er6muUdh6YpqY_E5iwRdCR9H7vVEXt3coJuPluUloFY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_password\":\"Testing@123\",\r\n    \"new_password\":\"Testing@321\",\r\n    \"confirm_new_password\":\"Testing@321\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/userPasswordUpdate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"userPasswordUpdate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddEmail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"email\":\"jagdish@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AddEmail",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AddEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ShowEmail",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ShowEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddQuizResponse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Jagdish\",\r\n    \"email\":\"jagidh@gmail.com\",\r\n    \"phone\":\"9334452344\",\r\n    \"answer1\":\"Everything is oky\",\r\n    \"answer2\":\"Hello ji\",\r\n    \"answer3\":\"hi how are you\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/AddQuiz",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"AddQuiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowQuizResponse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/ShowQuiz",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ShowQuiz"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

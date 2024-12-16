@@ -1,0 +1,62 @@
+name: Enquiry
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/showEnquiry
+    metadata:
+      groupName: Enquiry
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Retrieve all job enquiries.'
+      description: 'This endpoint returns a list of all job enquiries, including job title, location, user name, email, phone number, and any notes.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "success": 1,
+            "Enquires": [
+              {
+                "job_title": "Web Developer",
+                "job_location": "Remote",
+                "user_name": "John Doe",
+                "user_email": "john@example.com",
+                "user_phone_no": "1234567890",
+                "note": "Looking forward to discussing further."
+              }
+            ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0,
+            "error": "No Data Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

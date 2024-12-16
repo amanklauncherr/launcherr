@@ -1,0 +1,3252 @@
+name: Endpoints
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/user
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/term-conditions
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      content:
+        name: content
+        description: 'Must be a file. Must not be greater than 25600 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters: []
+    fileParameters:
+      content: null
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/emp/{user_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      user_id:
+        name: user_id
+        description: 'The ID of the user.'
+        required: true
+        example: perspiciatis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      user_id: perspiciatis
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"success":0,"error":"Token not provided. This Api requires Token"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/add/Subscription
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/add/User/Subscription
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      subscription_id:
+        name: subscription_id
+        description: 'The <code>id</code> of an existing record in the subscription_details table.'
+        required: true
+        example: veritatis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      subscription_id: veritatis
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Flight/Travel/History
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"success":0,"error":"Token not provided. This Api requires Token"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Bus/Travel/History
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"success":0,"error":"Token not provided. This Api requires Token"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/OrderID
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      OrderDetails:
+        name: OrderDetails
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      OrderDetails: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/get/Order/User
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"success":0,"error":"Token not provided. This Api requires Token"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/get/Order/Detail
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      OrderID:
+        name: OrderID
+        description: ''
+        required: true
+        example: repellat
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      OrderID: repellat
+    fileParameters: []
+    responses:
+      -
+        status: 400
+        content: '{"success":0,"message":"No Order Detail Found"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Get/All/Orders
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"success":1,"message":"Order List","data":[{"id":2,"OrderID":"launcherrA73CE6B562B7","OrderStatus":"OrderCreated","OrderDetails":{"id":113,"parent_id":0,"status":"processing","currency":"INR","version":"9.0.2","prices_include_tax":false,"date_created":"2024-08-12T10:47:55","date_modified":"2024-08-12T10:47:55","discount_total":"0.00","discount_tax":"0.00","shipping_total":"10.00","shipping_tax":"0.00","cart_tax":"0.00","total":"2107.00","total_tax":"0.00","customer_id":0,"order_key":"wc_order_Ar4jkfTLDemIV","billing":{"first_name":"John","last_name":"Doe","company":null,"address_1":"969 Market","address_2":null,"city":"San Francisco","state":"CA","postcode":"94103","country":"US","email":"nitin08837@gmail.com","phone":"(555) 555-5555"},"shipping":{"first_name":"John","last_name":"Doe","company":null,"address_1":"969 Market","address_2":null,"city":"San Francisco","state":"CA","postcode":"94103","country":"US","phone":null},"payment_method":"bacs","payment_method_title":"Direct Bank Transfer","transaction_id":null,"customer_ip_address":null,"customer_user_agent":null,"created_via":"rest-api","customer_note":null,"date_completed":null,"date_paid":"2024-08-12T10:47:55","cart_hash":null,"number":"113","meta_data":[],"line_items":[{"id":12,"name":"100% Premium Cotton T-Shirt - XXL","product_id":0,"variation_id":93,"quantity":2,"tax_class":null,"subtotal":"1398.00","subtotal_tax":"0.00","total":"1398.00","total_tax":"0.00","taxes":[],"meta_data":[{"id":106,"key":"pa_size","value":"xxl","display_key":"Size","display_value":"XXL"}],"sku":false,"price":699,"image":{"id":false,"src":null},"parent_name":null},{"id":13,"name":"100% Premium Cotton T-Shirt","product_id":0,"variation_id":0,"quantity":1,"tax_class":null,"subtotal":"699.00","subtotal_tax":"0.00","total":"699.00","total_tax":"0.00","taxes":[],"meta_data":[],"sku":null,"price":699,"image":{"id":0,"src":null},"parent_name":null}],"tax_lines":[],"shipping_lines":[{"id":14,"method_title":"Flat Rate","method_id":"flat_rate","instance_id":null,"total":"10.00","total_tax":"0.00","taxes":[],"meta_data":[]}],"fee_lines":[],"coupon_lines":[],"refunds":[],"payment_url":"https:\/\/ecom.launcherr.co\/checkout\/order-pay\/113\/?pay_for_order=true&key=wc_order_Ar4jkfTLDemIV","is_editable":false,"needs_payment":false,"needs_processing":true,"date_created_gmt":"2024-08-12T10:47:55","date_modified_gmt":"2024-08-12T10:47:55","date_completed_gmt":null,"date_paid_gmt":"2024-08-12T10:47:55","currency_symbol":"\u20b9","_links":{"self":[{"href":"https:\/\/ecom.launcherr.co\/wp-json\/wc\/v3\/orders\/113"}],"collection":[{"href":"https:\/\/ecom.launcherr.co\/wp-json\/wc\/v3\/orders"}]}}},{"id":3,"OrderID":"launcherrA0FAF9FE39B3","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":66,"user_id":64,"product_id":107,"product_name":"Premium Turkish Cotton Beach Towel - Yellow","quantity":1,"price":799,"sub_total":799},{"id":67,"user_id":64,"product_id":25,"product_name":"100% Premium Cotton Shorts","quantity":1,"price":799,"sub_total":799},{"id":71,"user_id":64,"product_id":125,"product_name":"Memory Foam Neck Pillow - Blue","quantity":1,"price":899,"sub_total":899}],"subTotal":2497,"gstAmt":449.46,"grand_Total":2946.46,"billing":{"firstName":"nitin","lastName":"kumar","address1":"fbd1","address2":"fbd1","city":"noidad","state":"decu","postcode":"201301","email":"nitin08837@gmail.com","phone":"8956748445"},"shipping":{"firstName":"ntjk","lastName":"kudmf","address1":"fbd1","address2":"fbs2","city":"noida","state":"dud","postcode":"3849843","phone":"8349598359835"}}},{"id":4,"OrderID":"launcherrBFBDE369014D","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":66,"user_id":64,"product_id":107,"product_name":"Premium Turkish Cotton Beach Towel - Yellow","quantity":1,"price":799,"sub_total":799},{"id":67,"user_id":64,"product_id":25,"product_name":"100% Premium Cotton Shorts","quantity":1,"price":799,"sub_total":799},{"id":71,"user_id":64,"product_id":125,"product_name":"Memory Foam Neck Pillow - Blue","quantity":1,"price":899,"sub_total":899}],"subTotal":2497,"gstAmt":449.46,"grand_Total":2946.46,"billing":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"email":null,"phone":null},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":5,"OrderID":"launcherr33F743481E90","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":66,"user_id":64,"product_id":107,"product_name":"Premium Turkish Cotton Beach Towel - Yellow","quantity":1,"price":799,"sub_total":799},{"id":67,"user_id":64,"product_id":25,"product_name":"100% Premium Cotton Shorts","quantity":1,"price":799,"sub_total":799},{"id":71,"user_id":64,"product_id":125,"product_name":"Memory Foam Neck Pillow - Blue","quantity":1,"price":899,"sub_total":899}],"subTotal":2497,"gstAmt":449.46,"grand_Total":2946.46,"billing":{"firstName":"nitin","lastName":"kumar","address1":"fbd","address2":"fbd2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9099898789"},"shipping":{"firstName":"nena","lastName":"kumar","address1":"fbd1","address2":"fbd2","city":"noida","state":"up","postcode":"209625","phone":"5675898590"}}},{"id":6,"OrderID":"launcherrF9BD9BF9477E","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":72,"user_id":37,"product_id":182,"product_name":"Memory Foam Raised Travel Neck Pillow - Black","quantity":1,"price":799,"sub_total":799}],"subTotal":799,"gstAmt":143.82,"grand_Total":942.82,"billing":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"email":null,"phone":null},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":7,"OrderID":"launcherr24B5505DE8B9","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":72,"user_id":37,"product_id":182,"product_name":"Memory Foam Raised Travel Neck Pillow - Black","quantity":1,"price":799,"sub_total":799}],"subTotal":799,"gstAmt":143.82,"grand_Total":942.82,"billing":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"email":null,"phone":null},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":8,"OrderID":"launcherr0B45B8E9F327","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":73,"user_id":37,"product_id":182,"product_name":"Memory Foam Raised Travel Neck Pillow - Black","quantity":1,"price":799,"sub_total":799}],"subTotal":799,"gstAmt":143.82,"grand_Total":942.82,"billing":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"email":null,"phone":null},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":9,"OrderID":"launcherr448FADFB8B76","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":74,"user_id":37,"product_id":184,"product_name":"Memory Foam Raised Travel Neck Pillow - Grey","quantity":1,"price":849,"sub_total":849}],"subTotal":849,"gstAmt":152.82,"grand_Total":1001.82,"billing":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"email":null,"phone":null},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":10,"OrderID":"launcherr62553CD41969","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":76,"user_id":38,"product_id":417,"product_name":"The Islander - Yellow - Large","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"Megha","lastName":"Khulbe","address1":"8163 ATS One Hamlet","address2":"Tower 8, floor 16","city":"Gautam Buddha Nagar","state":"Uttar Pradesh","postcode":"201304","email":"meghak@launcherr.co","phone":"05136417799"},"shipping":{"firstName":"Megha","lastName":"Khulbe","address1":"8163 ATS One Hamlet","address2":"Tower 8, floor 16","city":"Gautam Buddha Nagar","state":"Uttar Pradesh","postcode":"201304","phone":"05136417799"}}},{"id":11,"OrderID":"launcherr45623FD14718","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":76,"user_id":38,"product_id":417,"product_name":"The Islander - Yellow - Large","quantity":1,"price":1299,"sub_total":1299},{"id":77,"user_id":38,"product_id":424,"product_name":"The Islander - Blue - Small","quantity":2,"price":1299,"sub_total":2598}],"subTotal":3897,"gstAmt":701.4599999999999,"grand_Total":4598.46,"billing":{"firstName":"Megha","lastName":"Khulbe","address1":"8163 ATS One Hamlet","address2":"Tower 8, floor 16","city":"Gautam Buddha Nagar","state":"Uttar Pradesh","postcode":"201304","email":"meghak@launcherr.co","phone":"9871831224"},"shipping":{"firstName":"Megha","lastName":"Khulbe","address1":"8163 ATS One Hamlet","address2":"Tower 8, floor 16","city":"Gautam Buddha Nagar","state":"Uttar Pradesh","postcode":"201304","phone":"9871831224"}}},{"id":12,"OrderID":"launcherrCC4FACD70991","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":78,"user_id":37,"product_id":316,"product_name":"Roadie Tote","quantity":1,"price":749,"sub_total":749}],"subTotal":749,"gstAmt":134.82,"grand_Total":883.82,"billing":{"firstName":"Jagga","lastName":"Jasus","address1":"Almora","address2":null,"city":"Uttarahand","state":"Uttarahand","postcode":"110065","email":"test1@gmail.com","phone":"9599136456"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":13,"OrderID":"launcherr0538ADC96F4D","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":78,"user_id":37,"product_id":316,"product_name":"Roadie Tote","quantity":1,"price":749,"sub_total":749}],"subTotal":749,"gstAmt":134.82,"grand_Total":883.82,"billing":{"firstName":"Jagga","lastName":"Jasus","address1":"Almora","address2":null,"city":"Uttarahand","state":"Uttarahand","postcode":"110065","email":"test1@gmail.com","phone":"9599136456"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":14,"OrderID":"launcherrDA25CB3361A4","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":"nitin","lastName":"kumar","address1":"noida 1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","phone":"9057498447"}}},{"id":15,"OrderID":"launcherrD00122957D81","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":16,"OrderID":"launcherr08AE7F49AC97","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":17,"OrderID":"launcherr7B2C5E4CAA17","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":18,"OrderID":"launcherrD8556A06C147","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":19,"OrderID":"launcherrFB04187FF951","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":20,"OrderID":"launcherr339610CD9662","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":21,"OrderID":"launcherr28A824F45BE1","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":22,"OrderID":"launcherrE05C2F1CDE64","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida 1","address2":"noida2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":23,"OrderID":"launcherr1201BBF91CE3","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":24,"OrderID":"launcherrCC992DF18B6B","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida 1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin087723@gmail.com","phone":"9078675678"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":25,"OrderID":"launcherrDFC104FD0588","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":79,"user_id":64,"product_id":427,"product_name":"The Islander - Blue - XL","quantity":1,"price":1299,"sub_total":1299}],"subTotal":1299,"gstAmt":233.82,"grand_Total":1532.82,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida2","city":"noida","state":"UP","postcode":"209625","email":"nitin08837@gmail.com","phone":"9056474987"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":26,"OrderID":"launcherrCE5E2775AA4A","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":64,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida","address2":"noida","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":27,"OrderID":"launcherr0445BB8E49EB","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":64,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida","address2":"noida","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9876543210"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":28,"OrderID":"launcherr109FA1B93BB1","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":64,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida","address2":"noida","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":29,"OrderID":"launcherr28027ECADE49","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"Shubhang","lastName":"Verma","address1":"Florida","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@osls.com","phone":"9161760876"},"shipping":{"firstName":"Shubhang","lastName":"Verma","address1":"Florida","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","phone":"9161760876"}}},{"id":30,"OrderID":"launcherrA076EBA38380","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"Shubhang","lastName":"Verma","address1":"Florida","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"shubhang9verma@gmail.com","phone":"9161760876"},"shipping":{"firstName":"Shubhang","lastName":"Verma","address1":"Florida","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","phone":"9161760876"}}},{"id":31,"OrderID":"launcherr190F565DAB57","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"Shubhang","lastName":"Verma","address1":"Florida","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"9161760876"},"shipping":{"firstName":"Shubhang","lastName":"Verma","address1":null,"address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","phone":"9161760876"}}},{"id":32,"OrderID":"launcherrE94ABD1508FA","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"33","lastName":"Verma","address1":"Florida","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"9161760876"},"shipping":{"firstName":"jgggggj","lastName":"jjjj","address1":"jjjj","address2":"jjjj","city":"jjjjj","state":"jjjjj","postcode":"224001","phone":"9161760876"}}},{"id":33,"OrderID":"launcherrABB114672F59","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"33","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"9161760876"},"shipping":{"firstName":"33","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"gfgfgfgf","state":"uuuuu","postcode":"224001","phone":"9161760876"}}},{"id":34,"OrderID":"launcherr74D1AC603E44","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":64,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida 1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":35,"OrderID":"launcherrBEF8496AD397","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":64,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida 1","address2":"noida 2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":36,"OrderID":"launcherr6B62E324D316","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":64,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"nitin","lastName":"kumar","address1":"noida1","address2":"noida2","city":"noida","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9067498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":37,"OrderID":"launcherrBBABFC49EAFB","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"9161760876"},"shipping":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"miami","state":"uuuuu","postcode":"224001","phone":"9161760876"}}},{"id":38,"OrderID":"launcherr4BF1CFC3368E","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","phone":"09161760876"}}},{"id":39,"OrderID":"launcherr02BADCA96E41","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","phone":"09161760876"}}},{"id":40,"OrderID":"launcherr1DF5F01E553D","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","phone":"09161760876"}}},{"id":41,"OrderID":"launcherr2121BCC067F0","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":42,"OrderID":"launcherr83E299C1BD16","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":43,"OrderID":"launcherrDCE0D675426B","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":44,"OrderID":"launcherr829D50616F78","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":45,"OrderID":"launcherrBA6475648161","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":46,"OrderID":"launcherr11C0EC8DC5E4","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":47,"OrderID":"launcherrAEC9024B103A","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":81,"user_id":70,"product_id":450,"product_name":"Test Product ( By MMR)","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","email":"admin@example.com","phone":"09161760876"},"shipping":{"firstName":"69","lastName":"Verma","address1":"Sheridan","address2":"1309 Coffee Avenue STE 1200","city":"Ayodhya","state":"uuuuu","postcode":"224001","phone":"09161760876"}}},{"id":48,"OrderID":"launcherr4A4F1ADF0713","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":84,"user_id":64,"product_id":360,"product_name":"Ajna Coin Pouch","quantity":1,"price":250,"sub_total":250}],"subTotal":250,"gstAmt":45,"grand_Total":295,"billing":{"firstName":"nitin","lastName":"kumar","address1":"fbd","address2":"fbd","city":"noida","state":"up","postcode":"209625","email":"nitin@gmail.com","phone":"9057498447"},"shipping":{"firstName":"nitin","lastName":"kumar","address1":"fbd","address2":"fbd2","city":"noida","state":"up","postcode":"209625","phone":"9057687909"}}},{"id":49,"OrderID":"launcherr82EAE893815C","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":56,"user_id":52,"product_id":1,"product_name":"Blue Shirt","quantity":4,"price":200,"sub_total":800}],"subTotal":800,"gstAmt":144,"grand_Total":944,"billing":{"firstName":"nitin","lastName":null,"address1":"fbd","address2":"fbd","city":"fbd","state":"up","postcode":"209625","email":"nitin@gmail.com","phone":"9067498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":50,"OrderID":"launcherrF44F8725D856","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":56,"user_id":52,"product_id":1,"product_name":"Blue Shirt","quantity":4,"price":200,"sub_total":800}],"subTotal":800,"gstAmt":144,"grand_Total":944,"billing":{"firstName":"nitin","lastName":"kumar","address1":"fbd","address2":"fbd","city":"fbd","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9067498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":51,"OrderID":"launcherrF06813E3CE2A","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":84,"user_id":64,"product_id":360,"product_name":"Ajna Coin Pouch","quantity":1,"price":250,"sub_total":250}],"subTotal":250,"gstAmt":45,"grand_Total":295,"billing":{"firstName":"nitin","lastName":null,"address1":"fbd","city":"fbd","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":null,"lastName":null,"address1":null,"address2":null,"city":null,"state":null,"postcode":null,"phone":null}}},{"id":52,"OrderID":"launcherr6559C18F8C83","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":84,"user_id":56,"product_id":360,"product_name":"Ajna Coin Pouch","quantity":1,"price":250,"sub_total":250}],"subTotal":250,"gstAmt":45,"grand_Total":295,"billing":{"firstName":"sarthak","lastName":"gupta","address1":"344, shastri nagar, dadabari, kota","address2":null,"city":"Kota","state":"Rajasthan","postcode":"324009","email":"sarthakg@launcherr.co","phone":"09521426626"},"shipping":{"firstName":"sarthak","lastName":"gupta","address1":"344, shastri nagar, dadabari, kota","address2":null,"city":"Kota","state":"Rajasthan","postcode":"324009","phone":"09521426626"}}},{"id":53,"OrderID":"launcherrFB71EAC7E6BC","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":84,"user_id":57,"product_id":360,"product_name":"Ajna Coin Pouch","quantity":1,"price":1,"sub_total":1}],"subTotal":1,"gstAmt":0.18,"grand_Total":1.18,"billing":{"firstName":"Nitin","lastName":"Saini","address1":"B-192Arjun Nagar Green Park Main","address2":"Green Park","city":"Delhi","state":"Delhi","postcode":"110029","email":"nitinsaini8030@gmail.com","phone":"9560767761"},"shipping":{"firstName":"Nitin","lastName":"Saini","address1":"B-192Arjun Nagar Green Park Main","address2":"Green Park","city":"Delhi","state":"Delhi","postcode":"110029","phone":"9560767761"}}},{"id":54,"OrderID":"launcherrAEB09E95DD6C","OrderStatus":"OrderCreated","OrderDetails":{"products":[{"id":85,"user_id":64,"product_id":255,"product_name":"Alpine Travel Pouch","quantity":1,"price":399,"sub_total":399}],"subTotal":399,"gstAmt":71.82,"grand_Total":470.82,"billing":{"firstName":"nitin","lastName":null,"address1":"fbd","city":"fbd","state":"up","postcode":"209625","email":"nitin08837@gmail.com","phone":"9057498447"},"shipping":{"firstName":"nitin","lastName":"kumar","address1":"fbd","address2":"fbd","city":"fbd","state":"up","postcode":"209625","phone":"9057498447"}}}]}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/add
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Apply-Coupon
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      coupon_code:
+        name: coupon_code
+        description: 'The <code>coupon_code</code> of an existing record in the coupons table.'
+        required: true
+        example: quas
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      place:
+        name: place
+        description: ''
+        required: true
+        example: adipisci
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      coupon_code: quas
+      place: adipisci
+    fileParameters: []
+    responses:
+      -
+        status: 422
+        content: '{"errors":{"coupon_code":["The selected coupon code is invalid."]}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/term-conditions
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '[{"id":1,"content":"Terms","created_at":"2024-06-29","updated_at":"2024-07-04"}]'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/paypal
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/success
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Order/Paypal/Payment
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Order/Success
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: |-
+          {
+              "message": "Server Error"
+          }
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/cancel
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 500
+        content: '{"success":false,"message":"Payment Failure","link":"https:\/\/launcherr.co\/paymentFailure"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/AES/Encryption
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 400
+        content: '{"success":false,"message":"Failed to fetch token","error":"{\"status\":false,\"status_code\":\"IFR\",\"request_id\":\"NjczNzE5ZTE3MGMyMTIwMjQtMTEtMTUgMTU6MjI6MzM=\",\"payloads\":{\"errors\":{\"mobileNumber\":[\"The mobile number field is required.\"],\"password\":[\"The password field is required.\"]},\"data\":[],\"transaction\":[]},\"message\":\"Please share all required fields\"}"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Search/Flight
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      TYPE:
+        name: TYPE
+        description: ''
+        required: true
+        example: ONEWAY
+        type: string
+        enumValues:
+          - ONEWAY
+          - ROUNDTRIP
+          - MULTISTATE
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      tripInfo:
+        name: tripInfo
+        description: ''
+        required: true
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      travelType:
+        name: travelType
+        description: ''
+        required: true
+        example: '0'
+        type: string
+        enumValues:
+          - '0'
+          - '1'
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      adultCount:
+        name: adultCount
+        description: |-
+          0 for domestic, 1 for international
+          "bookingType" => "required|string|in:0,1,2,3", // 0 for one way, 1 for round trip.
+        required: true
+        example: minus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      childCount:
+        name: childCount
+        description: ''
+        required: true
+        example: porro
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      infantCount:
+        name: infantCount
+        description: ''
+        required: true
+        example: molestiae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      classOfTravel:
+        name: classOfTravel
+        description: ''
+        required: true
+        example: '0'
+        type: string
+        enumValues:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      airlineCode:
+        name: airlineCode
+        description: ''
+        required: false
+        example: omnis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Arrival:
+        name: Arrival
+        description: ''
+        required: false
+        example: accusamus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Departure:
+        name: Departure
+        description: ''
+        required: false
+        example: alias
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Refundable:
+        name: Refundable
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Stops:
+        name: Stops
+        description: ''
+        required: false
+        example: '1'
+        type: string
+        enumValues:
+          - '0'
+          - '1'
+          - '2'
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Price:
+        name: Price
+        description: ''
+        required: false
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: ex
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: non
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'tripInfo[].origin':
+        name: 'tripInfo[].origin'
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'tripInfo[].destination':
+        name: 'tripInfo[].destination'
+        description: ''
+        required: true
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'tripInfo[].travelDate':
+        name: 'tripInfo[].travelDate'
+        description: 'Must be a valid date in the format <code>m/d/Y</code>.'
+        required: true
+        example: 11/15/2024
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'tripInfo[].tripId':
+        name: 'tripInfo[].tripId'
+        description: ''
+        required: false
+        example: '0'
+        type: string
+        enumValues:
+          - '0'
+          - '1'
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      TYPE: ONEWAY
+      tripInfo:
+        -
+          origin: qui
+          destination: consequatur
+          travelDate: 11/15/2024
+          tripId: '0'
+      travelType: '0'
+      adultCount: minus
+      childCount: porro
+      infantCount: molestiae
+      classOfTravel: '0'
+      airlineCode: omnis
+      Arrival: accusamus
+      Departure: alias
+      Refundable: true
+      Stops: '1'
+      Price: 14
+      headersToken: ex
+      headersKey: non
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Fare/Rule
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      SearchKey:
+        name: SearchKey
+        description: ''
+        required: true
+        example: fuga
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      FareID:
+        name: FareID
+        description: ''
+        required: true
+        example: maxime
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      FlightKey:
+        name: FlightKey
+        description: ''
+        required: true
+        example: reiciendis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: asperiores
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: ab
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      SearchKey: fuga
+      FareID: maxime
+      FlightKey: reiciendis
+      headersToken: asperiores
+      headersKey: ab
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Re/Price
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      SearchKey:
+        name: SearchKey
+        description: ''
+        required: true
+        example: totam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      FareID:
+        name: FareID
+        description: ''
+        required: true
+        example: corrupti
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      FlightKey:
+        name: FlightKey
+        description: ''
+        required: true
+        example: eos
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      CustomerContact:
+        name: CustomerContact
+        description: 'Must be at least 10 characters. Must not be greater than 10 characters.'
+        required: true
+        example: jlojcqdwz
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: repudiandae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: dolore
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      adultCount:
+        name: adultCount
+        description: ''
+        required: true
+        example: praesentium
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      childCount:
+        name: childCount
+        description: ''
+        required: true
+        example: dolores
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      infantCount:
+        name: infantCount
+        description: ''
+        required: true
+        example: dolores
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      SearchKey: totam
+      FareID: corrupti
+      FlightKey: eos
+      CustomerContact: jlojcqdwz
+      headersToken: repudiandae
+      headersKey: dolore
+      adultCount: praesentium
+      childCount: dolores
+      infantCount: dolores
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Check/Wallet
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      BookingRef:
+        name: BookingRef
+        description: ''
+        required: true
+        example: fugit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      UserRef:
+        name: UserRef
+        description: ''
+        required: true
+        example: exercitationem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: sunt
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: ut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      BookingRef: fugit
+      UserRef: exercitationem
+      headersToken: sunt
+      headersKey: ut
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Cancellation
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: inventore
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: necessitatibus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      bookingRef:
+        name: bookingRef
+        description: ''
+        required: true
+        example: eos
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      pnr:
+        name: pnr
+        description: ''
+        required: true
+        example: dolorem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      cancelType:
+        name: cancelType
+        description: ''
+        required: true
+        example: exercitationem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      cancelCode:
+        name: cancelCode
+        description: '0-Normal Cancel, 1-Full Refund, 2-No Show.'
+        required: true
+        example: corporis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      remark:
+        name: remark
+        description: ''
+        required: true
+        example: velit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      ticketCancelDetails:
+        name: ticketCancelDetails
+        description: ''
+        required: false
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'ticketCancelDetails[].FlightId':
+        name: 'ticketCancelDetails[].FlightId'
+        description: ''
+        required: true
+        example: alias
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'ticketCancelDetails[].PassengerId':
+        name: 'ticketCancelDetails[].PassengerId'
+        description: ''
+        required: true
+        example: beatae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'ticketCancelDetails[].SegmentId':
+        name: 'ticketCancelDetails[].SegmentId'
+        description: ''
+        required: true
+        example: quisquam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      headersToken: inventore
+      headersKey: necessitatibus
+      bookingRef: eos
+      pnr: dolorem
+      cancelType: exercitationem
+      cancelCode: corporis
+      remark: velit
+      ticketCancelDetails:
+        -
+          FlightId: alias
+          PassengerId: beatae
+          SegmentId: quisquam
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Low/Fare
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: sed
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      origin:
+        name: origin
+        description: ''
+        required: true
+        example: nesciunt
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      destination:
+        name: destination
+        description: ''
+        required: true
+        example: sit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      month:
+        name: month
+        description: ''
+        required: true
+        example: corrupti
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      year:
+        name: year
+        description: ''
+        required: true
+        example: ut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      headersToken: qui
+      headersKey: sed
+      origin: nesciunt
+      destination: sit
+      month: corrupti
+      year: ut
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Sector/Avalability
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: similique
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      headersToken: similique
+      headersKey: architecto
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Release/PNR
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: voluptas
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      travelType:
+        name: travelType
+        description: ''
+        required: true
+        example: nisi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      bookingType:
+        name: bookingType
+        description: ''
+        required: true
+        example: possimus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      origin:
+        name: origin
+        description: ''
+        required: true
+        example: aliquid
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      destination:
+        name: destination
+        description: ''
+        required: true
+        example: officia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      travelDate:
+        name: travelDate
+        description: 'Must be a valid date.'
+        required: true
+        example: '2024-11-15T09:52:34'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      tripId:
+        name: tripId
+        description: ''
+        required: true
+        example: earum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      adultCount:
+        name: adultCount
+        description: ''
+        required: true
+        example: reprehenderit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      childCount:
+        name: childCount
+        description: ''
+        required: true
+        example: porro
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      infantCount:
+        name: infantCount
+        description: ''
+        required: true
+        example: accusamus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      classOfTravel:
+        name: classOfTravel
+        description: ''
+        required: true
+        example: quae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      headersToken: qui
+      headersKey: voluptas
+      travelType: nisi
+      bookingType: possimus
+      origin: aliquid
+      destination: officia
+      travelDate: '2024-11-15T09:52:34'
+      tripId: earum
+      adultCount: reprehenderit
+      childCount: porro
+      infantCount: accusamus
+      classOfTravel: quae
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Get/Source/Cities
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 400
+        content: '{"success":0,"message":"Provide Either City or State"}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Avaliable/Trip
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: quo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: non
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      sourceId:
+        name: sourceId
+        description: ''
+        required: true
+        example: ducimus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      destinationId:
+        name: destinationId
+        description: ''
+        required: true
+        example: libero
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      date:
+        name: date
+        description: ''
+        required: true
+        example: aut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      AC:
+        name: AC
+        description: ''
+        required: false
+        example: quo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Seater:
+        name: Seater
+        description: ''
+        required: false
+        example: quia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Sleeper:
+        name: Sleeper
+        description: ''
+        required: false
+        example: optio
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Arrival:
+        name: Arrival
+        description: ''
+        required: false
+        example: consequatur
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      Departure:
+        name: Departure
+        description: ''
+        required: false
+        example: modi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      headersToken: quo
+      headersKey: non
+      sourceId: ducimus
+      destinationId: libero
+      date: aut
+      AC: quo
+      Seater: quia
+      Sleeper: optio
+      Arrival: consequatur
+      Departure: modi
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Current/Trip/Details
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      tripId:
+        name: tripId
+        description: ''
+        required: true
+        example: quaerat
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: explicabo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: suscipit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      tripId: quaerat
+      headersToken: explicabo
+      headersKey: suscipit
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Boarding/Point/Details
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      boardingPoint:
+        name: boardingPoint
+        description: ''
+        required: true
+        example: exercitationem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      tripId:
+        name: tripId
+        description: ''
+        required: true
+        example: eveniet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: molestiae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: doloribus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      boardingPoint: exercitationem
+      tripId: eveniet
+      headersToken: molestiae
+      headersKey: doloribus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Get/Cancelation/Data
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      referenceId:
+        name: referenceId
+        description: ''
+        required: true
+        example: non
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: voluptatum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      referenceId: non
+      headersToken: et
+      headersKey: voluptatum
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Get/Cancel/Ticket
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      referenceId:
+        name: referenceId
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      seatsToCancel:
+        name: seatsToCancel
+        description: ''
+        required: true
+        example:
+          - voluptatum
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: ut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: culpa
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      referenceId: qui
+      seatsToCancel:
+        - voluptatum
+      headersToken: ut
+      headersKey: culpa
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Temp/Booking
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      totalCount:
+        name: totalCount
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      mobile:
+        name: mobile
+        description: 'Must not be greater than 10 characters. Must be at least 10 characters.'
+        required: true
+        example: pedrfwdwueqbrekgtraavxvbzupvntkkjeqbcwyxxmovqtdummok
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      whatsApp:
+        name: whatsApp
+        description: 'Must not be greater than 10 characters. Must be at least 10 characters.'
+        required: true
+        example: jlfuvduigsahwaainlwlmthfewpmjjkxnlpftxnjlfdwicpeorqkippvctndg
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: hrussel@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      gst:
+        name: gst
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      gst.isGst:
+        name: gst.isGst
+        description: ''
+        required: true
+        example: eos
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      gst.gstNumber:
+        name: gst.gstNumber
+        description: ''
+        required: false
+        example: molestiae
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      gst.gstName:
+        name: gst.gstName
+        description: ''
+        required: false
+        example: cum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      gst.gstAddress:
+        name: gst.gstAddress
+        description: ''
+        required: false
+        example: aut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      searchKey:
+        name: searchKey
+        description: ''
+        required: true
+        example: neque
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      FlightKey:
+        name: FlightKey
+        description: ''
+        required: true
+        example: ducimus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: illo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      passenger_details:
+        name: passenger_details
+        description: ''
+        required: false
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'passenger_details[].paxType':
+        name: 'passenger_details[].paxType'
+        description: ''
+        required: true
+        example: '1'
+        type: integer
+        enumValues:
+          - '0'
+          - '1'
+          - '2'
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'passenger_details[].title':
+        name: 'passenger_details[].title'
+        description: 0-ADT/1-CHD/2-INF.
+        required: true
+        example: Mr
+        type: string
+        enumValues:
+          - Mr
+          - Mrs
+          - Ms
+          - Mstr
+          - Miss
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'passenger_details[].firstName':
+        name: 'passenger_details[].firstName'
+        description: 'MR, MRS, MS; MSTR, MISS for child/infant.'
+        required: true
+        example: maiores
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'passenger_details[].lastName':
+        name: 'passenger_details[].lastName'
+        description: ''
+        required: true
+        example: eveniet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'passenger_details[].age':
+        name: 'passenger_details[].age'
+        description: ''
+        required: false
+        example: 8
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'passenger_details[].gender':
+        name: 'passenger_details[].gender'
+        description: ''
+        required: true
+        example: '0'
+        type: integer
+        enumValues:
+          - '0'
+          - '1'
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'passenger_details[].dob':
+        name: 'passenger_details[].dob'
+        description: '0-Male, 1-Female. Must be a valid date.'
+        required: true
+        example: '2024-11-15T09:52:34'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'passenger_details[].passportNumber':
+        name: 'passenger_details[].passportNumber'
+        description: ''
+        required: false
+        example: illo
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'passenger_details[].passportIssuingAuthority':
+        name: 'passenger_details[].passportIssuingAuthority'
+        description: ''
+        required: false
+        example: saepe
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'passenger_details[].passportExpire':
+        name: 'passenger_details[].passportExpire'
+        description: 'Must be a valid date.'
+        required: false
+        example: '2024-11-15T09:52:34'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'passenger_details[].nationality':
+        name: 'passenger_details[].nationality'
+        description: ''
+        required: false
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'passenger_details[].pancardNumber':
+        name: 'passenger_details[].pancardNumber'
+        description: ''
+        required: false
+        example: iure
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'passenger_details[].frequentFlyerDetails':
+        name: 'passenger_details[].frequentFlyerDetails'
+        description: ''
+        required: false
+        example: eos
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      totalCount: qui
+      mobile: pedrfwdwueqbrekgtraavxvbzupvntkkjeqbcwyxxmovqtdummok
+      whatsApp: jlfuvduigsahwaainlwlmthfewpmjjkxnlpftxnjlfdwicpeorqkippvctndg
+      email: hrussel@example.org
+      gst:
+        isGst: eos
+        gstNumber: molestiae
+        gstName: cum
+        gstAddress: aut
+      searchKey: neque
+      FlightKey: ducimus
+      headersToken: illo
+      headersKey: qui
+      passenger_details:
+        -
+          paxType: '1'
+          title: Mr
+          firstName: maiores
+          lastName: eveniet
+          age: 8
+          gender: '0'
+          dob: '2024-11-15T09:52:34'
+          passportNumber: illo
+          passportIssuingAuthority: saepe
+          passportExpire: '2024-11-15T09:52:34'
+          nationality: qui
+          pancardNumber: iure
+          frequentFlyerDetails: eos
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Ticketing
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      BookingRef:
+        name: BookingRef
+        description: ''
+        required: true
+        example: autem
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      UserRef:
+        name: UserRef
+        description: ''
+        required: true
+        example: quibusdam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      TicketingType:
+        name: TicketingType
+        description: ''
+        required: true
+        example: nulla
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: blanditiis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: doloremque
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      BookingRef: autem
+      UserRef: quibusdam
+      TicketingType: nulla
+      headersToken: blanditiis
+      headersKey: doloremque
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Re/Print/Ticket
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: non
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: qui
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      bookingRef:
+        name: bookingRef
+        description: ''
+        required: false
+        example: ipsum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      pnr:
+        name: pnr
+        description: ''
+        required: false
+        example: impedit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      headersToken: non
+      headersKey: qui
+      bookingRef: ipsum
+      pnr: impedit
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Partial/Booking
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      boardingPoint:
+        name: boardingPoint
+        description: ''
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      tripId:
+        name: tripId
+        description: ''
+        required: true
+        example: eos
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      dropingPoint:
+        name: dropingPoint
+        description: ''
+        required: true
+        example: quis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      source:
+        name: source
+        description: ''
+        required: true
+        example: possimus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      destination:
+        name: destination
+        description: ''
+        required: true
+        example: magni
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      serviceCharge:
+        name: serviceCharge
+        description: ''
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: quia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: libero
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      inventoryItems:
+        name: inventoryItems
+        description: ''
+        required: false
+        example:
+          - []
+        type: 'object[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].seatName':
+        name: 'inventoryItems[].seatName'
+        description: ''
+        required: true
+        example: eveniet
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].fare':
+        name: 'inventoryItems[].fare'
+        description: ''
+        required: true
+        example: 184213.34198
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].serviceTax':
+        name: 'inventoryItems[].serviceTax'
+        description: ''
+        required: true
+        example: 6.18
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].operatorServiceCharge':
+        name: 'inventoryItems[].operatorServiceCharge'
+        description: ''
+        required: true
+        example: 5.370531
+        type: number
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].ladiesSeat':
+        name: 'inventoryItems[].ladiesSeat'
+        description: ''
+        required: true
+        example: dolores
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger':
+        name: 'inventoryItems[].passenger'
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger.name':
+        name: 'inventoryItems[].passenger.name'
+        description: ''
+        required: true
+        example: nisi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger.mobile':
+        name: 'inventoryItems[].passenger.mobile'
+        description: 'Must be at least 10 characters. Must not be greater than 10 characters.'
+        required: true
+        example: ktahfokf
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger.title':
+        name: 'inventoryItems[].passenger.title'
+        description: ''
+        required: true
+        example: ut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger.email':
+        name: 'inventoryItems[].passenger.email'
+        description: ''
+        required: true
+        example: ostiedemann@example.net
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger.age':
+        name: 'inventoryItems[].passenger.age'
+        description: ''
+        required: true
+        example: eligendi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger.gender':
+        name: 'inventoryItems[].passenger.gender'
+        description: ''
+        required: true
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger.address':
+        name: 'inventoryItems[].passenger.address'
+        description: ''
+        required: true
+        example: ipsam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'inventoryItems[].passenger.idType':
+        name: 'inventoryItems[].passenger.idType'
+        description: ''
+        required: false
+        example: rerum
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'inventoryItems[].passenger.idNumber':
+        name: 'inventoryItems[].passenger.idNumber'
+        description: ''
+        required: false
+        example: et
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      'inventoryItems[].passenger.primary':
+        name: 'inventoryItems[].passenger.primary'
+        description: ''
+        required: false
+        example: temporibus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      boardingPoint: et
+      tripId: eos
+      dropingPoint: quis
+      source: possimus
+      destination: magni
+      serviceCharge: et
+      headersToken: quia
+      headersKey: libero
+      inventoryItems:
+        -
+          seatName: eveniet
+          fare: 184213.34198
+          serviceTax: 6.18
+          operatorServiceCharge: 5.370531
+          ladiesSeat: dolores
+          passenger:
+            name: nisi
+            mobile: ktahfokf
+            title: ut
+            email: ostiedemann@example.net
+            age: eligendi
+            gender: et
+            address: ipsam
+            idType: rerum
+            idNumber: et
+            primary: temporibus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Book/Ticket
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      userRef:
+        name: userRef
+        description: ''
+        required: true
+        example: natus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      amount:
+        name: amount
+        description: ''
+        required: true
+        example: adipisci
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      baseFare:
+        name: baseFare
+        description: ''
+        required: true
+        example: velit
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      referenceKey:
+        name: referenceKey
+        description: ''
+        required: true
+        example: aut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      passengerPhone:
+        name: passengerPhone
+        description: 'Must not be greater than 10 characters. Must be at least 10 characters.'
+        required: true
+        example: eapduvjqiglvpivsrkxwxyqwijauxwchzulewfkmchktqikrxebpcklutbauafhfqdyudiucxqzs
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      passengerEmail:
+        name: passengerEmail
+        description: 'Must be a valid email address.'
+        required: true
+        example: herzog.kathleen@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: quia
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: natus
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      userRef: natus
+      amount: adipisci
+      baseFare: velit
+      referenceKey: aut
+      passengerPhone: eapduvjqiglvpivsrkxwxyqwijauxwchzulewfkmchktqikrxebpcklutbauafhfqdyudiucxqzs
+      passengerEmail: herzog.kathleen@example.com
+      headersToken: quia
+      headersKey: natus
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Check/Ticket
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      referenceId:
+        name: referenceId
+        description: ''
+        required: true
+        example: asperiores
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersToken:
+        name: headersToken
+        description: ''
+        required: true
+        example: facere
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      headersKey:
+        name: headersKey
+        description: ''
+        required: true
+        example: quaerat
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      referenceId: asperiores
+      headersToken: facere
+      headersKey: quaerat
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

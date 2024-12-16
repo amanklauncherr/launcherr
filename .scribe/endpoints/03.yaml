@@ -1,0 +1,190 @@
+name: 'User Password Reset'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/Reset/Password/Email
+    metadata:
+      groupName: 'User Password Reset'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Send a password reset email.'
+      description: |-
+        This endpoint allows a user to request a password reset by providing their email address.
+        If the email is valid and belongs to a user with the "user" role, an encrypted token is sent to the email.
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: "The user's email address."
+        required: true
+        example: zwest@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: zwest@example.com
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+             "success": 1,
+             "message": "Mail Sent Successfully. Check Your mail"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+             "success": 0,
+             "error": "No User Exists with provided email"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+             "success": 0,
+             "error": "Unauthorized Email Role. Only User email can access"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+             "success": 0,
+             "error": "Validation error message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/Reset/Password
+    metadata:
+      groupName: 'User Password Reset'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Reset the user's password."
+      description: |-
+        This endpoint allows a user to reset their password using a token sent to their email.
+        The token is validated, and if it has not expired, the user's password is updated.
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      token:
+        name: token
+        description: "The token sent to the user's email for verification."
+        required: true
+        example: ut
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'The new password (minimum 8 characters, must include at least one uppercase letter, one lowercase letter, one number, and one special character).'
+        required: true
+        example: '4.hFJ"k\glD4}@U"fYL'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      token: ut
+      password: '4.hFJ"k\glD4}@U"fYL'
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+             "success": 1,
+             "message": "Password Updated Successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+             "success": 0,
+             "error": "Your Link has Expired create a new one"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+             "success": 0,
+             "error": "Unauthorized Email Role. Only User email can access"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+             "success": 0,
+             "error": "Validation error message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+             "success": false,
+             "message": "An error occurred while updating the password"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

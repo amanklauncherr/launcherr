@@ -1,0 +1,421 @@
+name: AdminAuth
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/register
+    metadata:
+      groupName: AdminAuth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Register a new admin.
+
+        This endpoint registers a new user with the role of "admin" and returns the user details along with a JWT token upon successful registration.
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'The name of the user.'
+        required: true
+        example: 'John Doe'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'The email address of the user. Must be unique and follow RFC validation.'
+        required: true
+        example: john.doe@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'The password for the user, must be at least 8 characters long and contain an uppercase letter, a lowercase letter, a digit, and a special character.'
+        required: true
+        example: StrongP@ssw0rd
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: 'John Doe'
+      email: john.doe@example.com
+      password: StrongP@ssw0rd
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+              "success": 1
+              "admin": {
+                  "id": 1,
+                  "name": "John Doe",
+                  "email": "john.doe@example.com",
+                  "created_at": "2024-11-11T19:16:43.000000Z",
+                  "updated_at": "2024-11-11T19:16:43.000000Z",
+                  "roles": ["admin"]
+              },
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+              "success": 0,
+              "error": "The email is invalid."
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              "success": 0,
+              "message": "Error while Register",
+              "error": "Exception message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/auth/login
+    metadata:
+      groupName: AdminAuth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Admin Login
+
+        This endpoint allows an admin user to log in by providing their email and password.
+        Only users with the "admin" role are authorized to log in using this endpoint.
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'The email address of the user.'
+        required: true
+        example: admin@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: "The user's password, must be at least 8 characters long and contain an uppercase letter, a lowercase letter, a digit, and a special character."
+        required: true
+        example: StrongP@ssw0rd
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: admin@example.com
+      password: StrongP@ssw0rd
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": 1
+              "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+              "token_type": "bearer",
+              "expires_in": 3600,
+              "user" : {
+                  "id": 1,
+                  "name": "John Doe",
+                  "email": "john.doe@example.com",
+                  "created_at": "2024-11-11T19:16:43.000000Z",
+                  "updated_at": "2024-11-11T19:16:43.000000Z",
+                  "roles": ["admin"]
+               }
+            }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+              "success": 0,
+              "error": "Password does not match"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+              "success": 0,
+              "error": "Unauthorized Login Role. Only Admin can Login"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+              "success": 0,
+              "error": "Email doesn't exist"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+              "success": 0,
+              "error": "The email field is required."
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              "success": 0,
+              "message": "Error while logging in",
+              "error": "Exception message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/admin/profile
+    metadata:
+      groupName: AdminAuth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Get Profile
+
+        Retrieves the authenticated Admin's profile.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": 1,
+              "data": {
+                  "id": 1,
+                  "name": "Admin User",
+                  "email": "admin@example.com",
+                  "created_at": "2024-01-01T00:00:00.000000Z",
+                  "updated_at": "2024-01-01T00:00:00.000000Z"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+              "success": 0,
+              "error": "No User Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/profile/update
+    metadata:
+      groupName: AdminAuth
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Update Admin Profile
+
+        Allows the authenticated admin to update their profile information.
+        The name, email, and password fields are optional, but if provided,
+        they must meet the specified validation criteria.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: "optional The user's name, max 50 characters."
+        required: false
+        example: 'John Doe'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      email:
+        name: email
+        description: "optional The user's email address."
+        required: false
+        example: newadmin@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      password:
+        name: password
+        description: 'optional The new password, must be at least 8 characters long and contain an uppercase letter, a lowercase letter, a digit, and a special character.'
+        required: false
+        example: StrongP@ssw0rd
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+    cleanBodyParameters:
+      name: 'John Doe'
+      email: newadmin@example.com
+      password: StrongP@ssw0rd
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success" : 1
+              "message": "Profile updated successfully",
+              "user": {
+                  "id": 1,
+                  "name": "Updated Name",
+                  "email": "updatedemail@example.com",
+                  "created_at": "2024-01-01T00:00:00.000000Z",
+                  "updated_at": "2024-01-02T00:00:00.000000Z"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+              'success': 0,
+              "message": "Record not found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+              "success" : 0 
+              "errors" : "The email has already been taken."
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              'success': 0,
+              "message": "Error while Updating Admin Profile",
+              "error": "Exception message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

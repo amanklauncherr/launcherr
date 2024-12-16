@@ -1,0 +1,299 @@
+name: 'Subscription Card Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/addSubCard
+    metadata:
+      groupName: 'Subscription Card Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Add or Update a Subscription Card
+
+        This endpoint allows you to add a new subscription card or update an existing one based on the `card_no`. 
+        If the `card_no` already exists, the card is updated; otherwise, a new card is created.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      card_no:
+        name: card_no
+        description: 'The unique identifier for the subscription card.'
+        required: true
+        example: '"CARD123"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      title:
+        name: title
+        description: 'The title of the card (only required if creating a new card).'
+        required: true
+        example: '"Premium Subscription"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      price:
+        name: price
+        description: 'The price of the card (only required if creating a new card).'
+        required: true
+        example: '"100"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      price_2:
+        name: price_2
+        description: 'Optional secondary price of the card.'
+        required: false
+        example: '"90"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      features:
+        name: features
+        description: 'The features of the card as an array (only required if creating a new card).'
+        required: true
+        example:
+          - 'Feature 1'
+          - 'Feature 2'
+          - 'Feature 3'
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      buttonLabel:
+        name: buttonLabel
+        description: 'The button label text for the card (only required if creating a new card).'
+        required: true
+        example: '"Subscribe Now"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      card_no: '"CARD123"'
+      title: '"Premium Subscription"'
+      price: '"100"'
+      price_2: '"90"'
+      features:
+        - 'Feature 1'
+        - 'Feature 2'
+        - 'Feature 3'
+      buttonLabel: '"Subscribe Now"'
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+            "Success": 1,
+            "Message": "Card Added Successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 201
+        content: |-
+          {
+            "Success": 1,
+            "Message": "Updated Successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "errors": {
+              "card_no": ["The card_no field is required."],
+              "title": ["The title field is required."],
+              "price": ["The price field is required."]
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+            "success" : 0
+            "message": "An error occurred while Adding Coupon",
+            "error": "Detailed error message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/showSubCardAdmin
+    metadata:
+      groupName: 'Subscription Card Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Show All Subscription Cards (Admin View)
+
+        This endpoint retrieves all subscription cards with full details for administrative purposes.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            'success':1,
+            "Cards": [
+              {
+                "card_no": "001",
+                "title": "Premium Subscription",
+                "price": "100",
+                "price_2": "90",
+                "features": ["Feature 1", "Feature 2", "Feature 3"],
+                "buttonLabel": "Subscribe Now",
+                "created_at": "2024-01-01T00:00:00.000000Z",
+                "updated_at": "2024-01-01T00:00:00.000000Z"
+              },
+              {
+                "card_no": "002",
+                "title": "Basic Subscription",
+                "price": "50",
+                "features": ["Feature A", "Feature B"],
+                "buttonLabel": "Join Today",
+                "created_at": "2024-01-02T00:00:00.000000Z",
+                "updated_at": "2024-01-02T00:00:00.000000Z"
+              }
+            ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            'success': 0,
+            "Message": "No Subscription Card Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/showSubCard
+    metadata:
+      groupName: 'Subscription Card Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Show Subscription Cards for Front 
+
+        This endpoint retrieves all subscription cards, formatting the response to include card details such as title, price, optional secondary price, features, and button label.
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          [
+            {
+              "title": "Premium Subscription",
+              "price": "100",
+              "price_2": "90",
+              "features": ["Feature 1", "Feature 2", "Feature 3"],
+              "buttonLabel": "Subscribe Now"
+            },
+            {
+              "title": "Basic Subscription",
+              "price": "50",
+              "features": ["Feature A", "Feature B"],
+              "buttonLabel": "Join Today"
+            }
+          ]
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "message": "No subscription cards found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

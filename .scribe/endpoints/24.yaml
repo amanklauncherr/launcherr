@@ -1,0 +1,78 @@
+name: 'Airport Search'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/showIata/airport
+    metadata:
+      groupName: 'Airport Search'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'API to search for airports based on a query string, which could match IATA code, city, country, state, or airport name.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      query:
+        name: query
+        description: 'The search term (IATA code, city, country, state, or airport name).'
+        required: true
+        example: aliquam
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      query: aliquam
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "success": 1,
+            "data": [
+              {"iata_code": "XYZ", "airport_name": "XYZ Airport", "city": "XYZ City", "country": "Country", ...},
+              ...
+            ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0,
+            "message": "No Data Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+            "success": 0,
+            "error": "Something went wrong while retrieving data",
+            "details": "<error message>"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

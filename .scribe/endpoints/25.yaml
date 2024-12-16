@@ -1,0 +1,90 @@
+name: 'Airline Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/show/Airline
+    metadata:
+      groupName: 'Airline Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'API to retrieve airline data by its carrier code (IATA code).'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      code:
+        name: code
+        description: 'The IATA carrier code.'
+        required: true
+        example: aliquid
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      code: aliquid
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "success": 1,
+            "data": {
+              "carrier_code": "XYZ",
+              "airline_name": "XYZ Airlines",
+              "country": "Country",
+              "other_fields": "..."
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+            "success": 0,
+            "message": "Airline code is required"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0,
+            "message": "No Data Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+            "success": 0,
+            "error": "Something went wrong while retrieving data",
+            "details": "<error message>"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

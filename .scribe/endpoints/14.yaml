@@ -1,0 +1,781 @@
+name: 'Job Management'
+description: |-
+  **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+  **Note:** You will get the access_token after User Login
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/addJob
+    metadata:
+      groupName: 'Job Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Add a new job posting.
+
+        This endpoint allows an authenticated employer to add a new job posting. The job details such as title, description, 
+        short description, duration, location, and additional settings like active, verified, and badge status can be provided.     *
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'The title of the job.'
+        required: true
+        example: '"Software Engineer"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: 'The full description of the job.'
+        required: false
+        example: '"Looking for a skilled developer..."'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      short_description:
+        name: short_description
+        description: 'A short summary of the job.'
+        required: false
+        example: '"Develop web applications"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      duration:
+        name: duration
+        description: 'The duration of the job in months.'
+        required: true
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      active:
+        name: active
+        description: 'The active status of the job. Default: false.'
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      verified:
+        name: verified
+        description: 'The verified status of the job. Default: false.'
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      location:
+        name: location
+        description: 'The location of the job.'
+        required: true
+        example: '"New York"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      badge:
+        name: badge
+        description: 'Indicates if the job is featured or top-rated. Default: true.'
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      title: '"Software Engineer"'
+      description: '"Looking for a skilled developer..."'
+      short_description: '"Develop web applications"'
+      duration: 6
+      active: true
+      verified: true
+      location: '"New York"'
+      badge: true
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+              "id": 1,
+              "user_id": 10,
+              "title": "Software Engineer",
+              "description": "Looking for a skilled developer...",
+              "short_description": "Develop web applications",
+              "duration": 6,
+              "active": true,
+              "verified": false,
+              "location": "New York",
+              "badge": true,
+              "created_at": "2024-11-14T10:00:00.000000Z",
+              "updated_at": "2024-11-14T10:00:00.000000Z"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+              "errors": {
+                  "title": ["The title field is required."],
+                  "duration": ["The duration field is required."],
+                  "location": ["The location field is required."]
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              "success": 0,
+              "message": "An error occurred while Adding Coupon",
+              "error": "Error message details"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/updateJobActive/{id}'
+    metadata:
+      groupName: 'Job Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Update the active status of a job posting.
+
+        This endpoint allows the authenticated user to toggle the active status of a job posting.
+        The 'active' status is changed from true to false, or vice versa.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the job posting to update.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+              "job": {
+                  "id": 1,
+                  "user_id": 2,
+                  "title": "Senior Software Engineer",
+                  "description": "Seeking an experienced developer...",
+                  "verified": true,
+                  "active": true,
+                  "location": "Remote",
+                  "badge": true,
+                  "created_at": "2024-01-01T00:00:00Z",
+                  "updated_at": "2024-01-02T00:00:00Z"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+              "message": "Record not found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              "message": "An error occurred while updating Active field",
+              "error": "Error message details"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/updateJobVerified/{id}'
+    metadata:
+      groupName: 'Job Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Update the verified status of a job posting.
+
+        This endpoint allows the authenticated user to toggle the verified status of a job posting.
+        The 'verified' status is changed from true to false, or vice versa.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the job posting to update.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+             'success': 1,
+              "job": {
+                  "id": 1,
+                  "user_id": 2,
+                  "title": "Senior Software Engineer",
+                  "description": "Seeking an experienced developer...",
+                  "verified": true,
+                  "active": true,
+                  "location": "Remote",
+                  "badge": true,
+                  "created_at": "2024-01-01T00:00:00Z",
+                  "updated_at": "2024-01-02T00:00:00Z"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+              'success': 0
+              "message": "Record not found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              'success': 0
+              "message": "An error occurred while updating Verified field",
+              "error": "Error message details"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/showJobs/Admin
+    metadata:
+      groupName: 'Job Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Show all Job Postings (Admin)
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}*'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "success": 1, 
+          "message": 'Gigs List',
+          "job": [{"id": 1, "title": "Job Title", ...}]}
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0, 
+            "error": "No Gigs Added"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/updateJob/{id}'
+    metadata:
+      groupName: 'Job Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Update an existing job posting.
+
+        This endpoint allows the authenticated employer to update an existing job posting by ID. 
+
+        Only the fields provided in the request will be updated.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the job posting to update.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        name: title
+        description: 'The updated title of the job. Required if job does not exist.'
+        required: false
+        example: '"Senior Software Engineer"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      description:
+        name: description
+        description: 'The updated full description of the job.'
+        required: false
+        example: '"Seeking an experienced developer..."'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      short_description:
+        name: short_description
+        description: 'The updated short summary of the job.'
+        required: false
+        example: '"Develop large-scale applications"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: true
+        custom: []
+      duration:
+        name: duration
+        description: 'The duration of the job in months. Required if job does not exist.'
+        required: false
+        example: 12
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      location:
+        name: location
+        description: 'The location of the job. Required if job does not exist.'
+        required: false
+        example: '"Remote"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      title: '"Senior Software Engineer"'
+      description: '"Seeking an experienced developer..."'
+      short_description: '"Develop large-scale applications"'
+      duration: 12
+      location: '"Remote"'
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+              "Message": "Gig Update"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+              "Message": "Gig Not Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+              "errors": {
+                  "title": ["The title field is required when updating a new job."],
+                  "duration": ["The duration field is required when updating a new job."],
+                  "location": ["The location field is required when updating a new job."]
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              "message": "An error occurred while updating Coupon",
+              "error": "Error message details"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/searchJob
+    metadata:
+      groupName: 'Job Management'
+      groupDescription: |-
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after User Login
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Search for job postings based on various filter parameters.'
+      description: |-
+        This endpoint allows users to search for job postings based on location, duration, and verification status.
+        Additionally, it checks if the user has applied to the job posting (if the user is authenticated).
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      location:
+        name: location
+        description: 'optional Filter by location.'
+        required: false
+        example: '"New York"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      duration:
+        name: duration
+        description: 'optional Filter by duration (1 for exact match or less than or equal to the given value).'
+        required: false
+        example: 6
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      isVerified:
+        name: isVerified
+        description: 'optional Filter by verification status.'
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      location: '"New York"'
+      duration: 6
+      isVerified: true
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              'success': 0,
+              "job": [
+                  {
+                      "user_id": 2,
+                      "gig_id": 1,
+                      "gigs_title": "Senior Software Engineer",
+                      "gigs_description": "Seeking an experienced developer...",
+                      "gigs_Shortdescription": "Join our growing team.",
+                      "gigs_duration": 6,
+                      "gigs_location": "Remote",
+                      "gigs_badge": true,
+                      "isActive": true,
+                      "isVerified": true,
+                      "company_name": "TechCorp",
+                      "company_image": "https://example.com/company-image.jpg",
+                      "company_description": "Innovating the future of tech.",
+                      "isApplied": true
+                  }
+              ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+              'success' : 0
+              "message": "No Job Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+              "errors": {
+                  "location": ["The location field is required."]
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              'success': 0
+              "message": "An error occurred while adding or updating the About info",
+              "error": "Error message details"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/showJob
+    metadata:
+      groupName: 'Job Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Show details for a specific job.
+
+        This endpoint retrieves details for a specific job based on the provided job ID.
+        If the authenticated user is of type 'user', it will check if they have applied for this job.
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the job to retrieve.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+              "success": 1,
+              "message": "Gigs List",
+              "job": {
+                  "user_id": 10,
+                  "gig_id": 1,
+                  "gigs_title": "Web Developer",
+                  "gigs_description": "We are looking for a skilled Web Developer...",
+                  "gigs_Shortdescription": "Build responsive websites",
+                  "gigs_duration": "3 months",
+                  "isActive": true,
+                  "isVerified": true,
+                  "company_name": "By Launcherr",
+                  "company_image": "https://res.cloudinary.com/douuxmaix/image/upload/v1720553096/jhnimqyeodio3jqgxbp0.jpg",
+                  "company_description": "",
+                  "gigs_location": "New York",
+                  "isApplied": false,
+                  "gigs_badge": "Top-rated"
+              }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+              "success": 0,
+              "message": "Gigs not found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+              "success": 0,
+              "message": "An error occurred while Adding or Updating About info",
+              "error": "Error message details"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

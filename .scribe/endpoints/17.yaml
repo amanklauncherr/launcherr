@@ -1,0 +1,209 @@
+name: Cart
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/updateCart
+    metadata:
+      groupName: Cart
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update or add a product to the cart.'
+      description: 'This endpoint allows authenticated users to add a product to their cart or update an existing product in the cart. If the quantity is set to zero for an existing product, it will be removed from the cart.'
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      product_id:
+        name: product_id
+        description: 'The ID of the product.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      product_name:
+        name: product_name
+        description: 'The name of the product if it does not already exist in the cart.'
+        required: true
+        example: '"Laptop"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      quantity:
+        name: quantity
+        description: 'The quantity of the product (0 or more). If set to 0, the product will be removed from the cart.'
+        required: true
+        example: 2
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      price:
+        name: price
+        description: 'The price of a single unit of the product (must be at least 1).'
+        required: true
+        example: 500
+        type: integer
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      product_id: 1
+      product_name: '"Laptop"'
+      quantity: 2
+      price: 500
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            'success' : 1
+            "message": "Cart updated",
+            "Cart": {
+              "product_id": 1,
+              "product_name": "Laptop",
+              "quantity": 2,
+              "price": 1000,
+              "user_id": 1
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 400
+        content: |-
+          {
+            'success' : 1
+            "Message": "Quantity should be greater than 0"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+            "Success": 0,
+            "Message": "Unauthorized, Login To Add Cart"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+            'success': 1
+            "message": "An error occurred while Adding or Updating Cart Section",
+            "error": "Exception message"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/showCart
+    metadata:
+      groupName: Cart
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Show the user's cart and update quantities."
+      description: "This endpoint returns the contents of the user's cart, including the subtotal, GST amount, and grand total. It also allows updating the quantity of products if provided in the request body."
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      products:
+        name: products
+        description: 'An array of products to update with their `product_id`, `quantity`, and `price`. Only products with quantities greater than zero are retained.'
+        required: false
+        example:
+          - tempore
+        type: 'string[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      products:
+        - tempore
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            'success' : 1,
+            "products": [
+              {
+                "product_id": 1,
+                "product_name": "Laptop",
+                "quantity": 2,
+                "price": 500,
+                "sub_total": 1000
+              }
+            ],
+            "subTotal": 1000,
+            "gstAmt": 180,
+            "grand_Total": 1180
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 401
+        content: |-
+          {
+            "success": 0,
+            "message": "Unauthorized, Login To Check Your Cart"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            'success' : 1,
+            "message": "Please Add Some products in Your Cart"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

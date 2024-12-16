@@ -1,0 +1,199 @@
+name: 'Quiz Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/AddQuiz
+    metadata:
+      groupName: 'Quiz Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'API to add a quiz response. Validates the user input, saves the data, and sends a confirmation email.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: 'Name of the user.'
+        required: true
+        example: 'John Doe'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Email address of the user. Must be unique.'
+        required: true
+        example: johndoe@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      phone:
+        name: phone
+        description: 'Phone number of the user. Must be unique.'
+        required: true
+        example: '+1234567890'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      answer1:
+        name: answer1
+        description: 'Answer to the first quiz question.'
+        required: true
+        example: 'Option A'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      answer2:
+        name: answer2
+        description: 'Answer to the second quiz question.'
+        required: true
+        example: 'Option B'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      answer3:
+        name: answer3
+        description: 'Answer to the third quiz question.'
+        required: true
+        example: 'Option C'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: 'John Doe'
+      email: johndoe@example.com
+      phone: '+1234567890'
+      answer1: 'Option A'
+      answer2: 'Option B'
+      answer3: 'Option C'
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+           'success' : 0,
+           "message": "Quiz Answered Properly",
+           "User": {
+               "name": "John Doe",
+               "email": "johndoe@example.com",
+               "phone": "+1234567890"
+           },
+           "Answer": {
+               "Answer1": "Option A",
+               "Answer2": "Option B",
+               "Answer3": "Option C"
+           }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "success": 0,
+            "error": "The email has already been taken."
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+           'success' : 0,
+           "message": "An error occurred while Adding or Updating About info",
+           "error": "Error message details"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/ShowQuiz
+    metadata:
+      groupName: 'Quiz Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'API to retrieve all quiz responses. Returns an array of responses.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          [
+           {
+               "id": 1,
+               "name": "John Doe",
+               "email": "johndoe@example.com",
+               "phone": "+1234567890",
+               "answer1": "Option A",
+               "answer2": "Option B",
+               "answer3": "Option C",
+               "created_at": "2024-11-14T12:00:00.000Z",
+               "updated_at": "2024-11-14T12:00:00.000Z"
+           }
+          ]
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            'success'=>0
+            "message": "No Quiz Response found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

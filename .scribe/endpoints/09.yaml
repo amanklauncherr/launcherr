@@ -1,0 +1,174 @@
+name: 'About Section Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/Add-About
+    metadata:
+      groupName: 'About Section Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Add or Update About Section
+
+        This endpoint allows you to add or update the About section. If an About section already exists, it updates the existing record; otherwise, it creates a new one.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      heading:
+        name: heading
+        description: 'The heading of the About section. Required only if About section does not exist.'
+        required: true
+        example: '"Welcome to Our Company"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      content:
+        name: content
+        description: 'The content of the About section. Required only if About section does not exist.'
+        required: true
+        example: '"Our company was founded to provide exceptional service."'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      heading: '"Welcome to Our Company"'
+      content: '"Our company was founded to provide exceptional service."'
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+            'success': 1
+            "message": "About Created",
+            "About": {
+              "id": 1,
+              "heading": "Welcome to Our Company",
+              "content": "Our company was founded to provide exceptional service.",
+              "created_at": "2024-01-01T00:00:00.000000Z",
+              "updated_at": "2024-01-01T00:00:00.000000Z"
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "errors": {
+              "heading": [
+                "The heading field is required."
+              ],
+              "content": [
+                "The content field is required."
+              ]
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+            'success': 0
+            "message": "An error occurred while Adding or Updating About info",
+            "error": "Detailed error message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Show-About
+    metadata:
+      groupName: 'About Section Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Show About Section
+
+        This endpoint retrieves the About section information, including cards with images.
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "heading": "Welcome to Our Company",
+            "content": "Our company was founded to provide exceptional service.",
+            "url": "https://example.com/about",
+            "Cards": [
+              {
+                "Card_No": 1,
+                "Card_Heading": "Our Mission",
+                "Card_Subheading": "Delivering Excellence",
+                "Card_Image": "https://res.cloudinary.com/douuxmaix/image/upload/v1720289812/m7pzdvuezcuetbrzqlek.png"
+              },
+              {
+                "Card_No": 2,
+                "Card_Heading": "Our Vision",
+                "Card_Subheading": "Innovate for the Future",
+                "Card_Image": "https://res.cloudinary.com/douuxmaix/image/upload/v1720289779/vz2x9n2ualplwvlg0f9m.png"
+              }
+            ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "message": "No About section found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

@@ -1,0 +1,196 @@
+name: 'Company Details Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/Add-Details
+    metadata:
+      groupName: 'Company Details Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Add or Update Company Details
+
+        This endpoint allows you to add or update the company's details. If company details already exist, the fields become optional; otherwise, they are required for creating a new entry.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      company_name:
+        name: company_name
+        description: 'The name of the company (required if no details exist).'
+        required: true
+        example: '"ABC Corp"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      company_address:
+        name: company_address
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      company_email:
+        name: company_email
+        description: 'The email address of the company (required if no details exist).'
+        required: true
+        example: '"info@abccorp.com"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      company_contact:
+        name: company_contact
+        description: 'The contact number of the company (required if no details exist).'
+        required: true
+        example: '"+1234567890"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      company_timing:
+        name: company_timing
+        description: 'The business hours or timing of the company (required if no details exist).'
+        required: true
+        example: '"9 AM - 6 PM"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      company_name: '"ABC Corp"'
+      company_email: '"info@abccorp.com"'
+      company_contact: '"+1234567890"'
+      company_timing: '"9 AM - 6 PM"'
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+           'success': 1
+            "message": "Company Details updated"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 201
+        content: |-
+          {
+            'success': 1
+            "message": "Company Details Created"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "errors": {
+              "company_name": [
+                "The company_name field is required."
+              ],
+              "company_email": [
+                "The company_email field is required."
+              ]
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+            'success': 0
+            "message": "An error occurred while Adding or Updating Company Details",
+            "error": "Detailed error message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Show-Details
+    metadata:
+      groupName: 'Company Details Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Show Company Details
+
+        This endpoint retrieves the existing company details. If no details are found, a message is returned.
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "company_name": "ABC Corp",
+            "company_email": "info@abccorp.com",
+            "company_contact": "+1234567890",
+            "company_timing": "9 AM - 6 PM"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "message": "No Details found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

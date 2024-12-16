@@ -1,0 +1,366 @@
+{
+	"info": {
+		"_postman_id": "de4cd557-04d5-4683-9df5-fe1e5984aff4",
+		"name": "Laravel_Launcher_Link",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29611540",
+		"_collection_link": "https://mmr777.postman.co/workspace/Team-Workspace~0737c42f-24d1-4f2f-8f16-300d5e5d2eb0/collection/29611540-de4cd557-04d5-4683-9df5-fe1e5984aff4?action=share&source=collection_link&creator=29611540"
+	},
+	"item": [
+		{
+			"name": "Terms-condition",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\":\"Hello Launcher\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/term-conditions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"term-conditions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Client",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "www.gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Jagdish/OneDrive/Pictures/zoro.jpg"
+						},
+						{
+							"key": "ba",
+							"value": "Banner 2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "banners[1][banner_url]",
+							"type": "file",
+							"src": "/C:/Users/Jagdish/OneDrive/Pictures/v.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/Show-Client",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"Show-Client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Section",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"section\":\"1\",\r\n    \"heading\":\"Hell Section\",\r\n    \"sub-heading\":\"sub\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/Show-Section",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"Show-Section"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-About",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"heading\":\"Hello 1\",\r\n    \"content\":\"Hello 1\",\r\n    \"url\":\"https://www.youtube.com/watch?v=GRe-HQUjbZI\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/Show-About",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"Show-About"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Banner",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Banner_No",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "Banner_heading",
+							"value": "1st Banner",
+							"type": "text"
+						},
+						{
+							"key": "Banner_image",
+							"type": "file",
+							"src": "/C:/Users/Jagdish/OneDrive/Pictures/v.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/Show-Banner",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"Show-Banner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-QueAndAns",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Question\":\"Production 1\",\r\n    \"Answer\":\"Launcher 1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/Show-QueAndAns",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"Show-QueAndAns"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"company_name\": \"Example Company\",\r\n    \"company_address\": \"1234 Main St\",\r\n           \"company_email\": \"contact@example.co\",\r\n           \"company_contact\": \"123-456-7891\",\r\n           \"company_timing\": \"9 AM - 6 PM\"\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/Show-Details",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"Show-Details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show-Coupon",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"coupon_places\":[\"Travel\",\"Shop\"],\r\n    \"discount\":40\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/Show-Coupon",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"Show-Coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"email\":\"info@TestingUser2.co\",\r\n       \"password\":\"Testing@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/auth/userLogin",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"auth",
+						"userLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Testing User2\",\r\n    \"email\":\"info@TestingUser2.co\",\r\n    \"password\":\"Testing@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.launcherr.co/api/auth/userRegister",
+					"protocol": "https",
+					"host": [
+						"api",
+						"launcherr",
+						"co"
+					],
+					"path": [
+						"api",
+						"auth",
+						"userRegister"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

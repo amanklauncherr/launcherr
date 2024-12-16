@@ -1,0 +1,135 @@
+name: 'Newsletter Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/AddEmail
+    metadata:
+      groupName: 'Newsletter Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'API to add a new email address to the newsletter subscription list. A confirmation email is sent upon successful addition.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      email:
+        name: email
+        description: 'Email address to be subscribed to the newsletter. Must be unique.'
+        required: true
+        example: johndoe@example.com
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      email: johndoe@example.com
+    fileParameters: []
+    responses:
+      -
+        status: 201
+        content: |-
+          {
+           'success' : 1,
+           "message": "Email Added Successfully"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+            "errors": {
+                "email": [
+                    "The email field is required.",
+                    "The email must be a valid email address.",
+                    "The email has already been taken."
+                ]
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+            'success' : 0,
+            "message": "An error occurred while Adding Email",
+            "error": "Error message details"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/ShowEmail
+    metadata:
+      groupName: 'Newsletter Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'API to retrieve all email addresses subscribed to the newsletter.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          [
+
+           {
+               "id": 1,
+               "email": "johndoe@example.com",
+               "created_at": "2024-11-14T12:00:00.000Z",
+               "updated_at": "2024-11-14T12:00:00.000Z"
+           }
+          ]
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+           'success': 0
+            "message": "No Quiz Response found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

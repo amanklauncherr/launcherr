@@ -1,0 +1,187 @@
+name: 'Section Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - POST
+    uri: api/Add-Section
+    metadata:
+      groupName: 'Section Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Add or Update Section
+
+        This endpoint adds a new section if it does not exist, or updates it if it does.
+        - If the `section` already exists, only `heading` and `sub-heading` are optional.
+        - Otherwise, all fields are required.
+
+        **Note:** This endpoint requires an `Authorization: Bearer <access_token>` header.
+
+        **Note:** You will get the access_token after Admin Login
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {access_token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      section:
+        name: section
+        description: 'The section name.'
+        required: true
+        example: '"About Us"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      heading:
+        name: heading
+        description: 'optional The section heading, required if section does not exist.'
+        required: false
+        example: '"Welcome to Our Company"'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      sub-heading:
+        name: sub-heading
+        description: 'optional The section sub-heading, max length 1500 characters, required if section does not exist.'
+        required: false
+        example: '"Our mission is to provide..."'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      section: '"About Us"'
+      heading: '"Welcome to Our Company"'
+      sub-heading: '"Our mission is to provide..."'
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+             "success" : 1
+             "message": "Section updated"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 201
+        content: |-
+          {
+              "success" : 1
+             "message": "Section created"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: |-
+          {
+             "success": 0,
+             "error": "Validation error message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+             "success" : 0
+             "message": "An error occurred while Adding or Updating Section",
+             "error": "Detailed error message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Show-Section
+    metadata:
+      groupName: 'Section Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: |-
+        Show All Sections
+
+        Retrieves all sections. Returns a 404 error if no sections are found.
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "About Us": {
+                "heading": "Welcome to Our Company",
+                "sub-heading": "Our mission is to provide..."
+            },
+            "Services": {
+                "heading": "What We Offer",
+                "sub-heading": ""
+            }
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0,
+            "message": "No sections found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 500
+        content: |-
+          {
+            "success": 0,
+            "message": "An error occurred while fetching sections",
+            "error": "Detailed error message here"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

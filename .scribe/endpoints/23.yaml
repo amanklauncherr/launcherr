@@ -1,0 +1,158 @@
+name: 'IATA Code Management'
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/showIata
+    metadata:
+      groupName: 'IATA Code Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'API to retrieve a list of all IATA codes.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "success": 1,
+            "Data": [
+              {"iata_code": "XYZ", "airport_name": "XYZ Airport", "city": "XYZ City", "country": "Country", ...},
+              ...
+            ]
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0,
+            "message": "No Data Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/Check/IATA
+    metadata:
+      groupName: 'IATA Code Management'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'API to check if the provided Origin and Destination any IATA codes is either Domestic or Intrernational if Domestic it will return 0 else 1.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      Origin:
+        name: Origin
+        description: 'The IATA code for the origin airport.'
+        required: true
+        example: assumenda
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      Destination:
+        name: Destination
+        description: 'The IATA code for the destination airport.'
+        required: true
+        example: animi
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      Origin: assumenda
+      Destination: animi
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+            "success": 1,
+            "data": "0" // Both IATA codes are from India
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 200
+        content: |-
+          {
+            "success": 1,
+            "data": "1" // At least one IATA code is not from India
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0,
+            "message": "Please Provide Origin and Destination Iata Both"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0,
+            "message": "Origin Iata Not Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 404
+        content: |-
+          {
+            "success": 0,
+            "message": "Destination Iata Not Found"
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
